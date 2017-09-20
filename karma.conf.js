@@ -18,7 +18,7 @@ module.exports = function(config) {
 	'lib/angular.min.js',
 	'lib/angular-mocks.js',
 	'app/app.js',
-    'tests/controller.spec.js'
+    'tests/app.spec.js'
     ],
 
 

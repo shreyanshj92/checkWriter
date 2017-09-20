@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+    <title>Check Writer</title>
+    <!-- stylesheets -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../app/style.css" rel="stylesheet" />
+    <!-- Angular dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    </head>
+<body ng-controller="myCtrl">
+	<form name="form">
+	<div class="container">
+    <h1>Check Writer</h1>
+    <input id="Text1" type="number" name="input" ng-model="inputNumber" ng-pattern="/^\d+(\.\d+)?$/" maxlength="9" placeholder="Enter Number Here" value="input" onfocus="clearField(this);" required/>
+    <button class="btn btn-primary" type="submit" ng-click="converter()">Convert Number to Word</button>
+	<br /><br />
+	<span ng-hide="form.input.$valid">Enter valid input number</span>
+	<br /><br />
+	<label> Input Number : </label>
+	<label >
+        {{inputNumber}}
+    </label> 
+	<br /><br />
+	<label>Result : </label>
+    <label id="divDisplayWords">
+        {{output}}
+    </label>  
+	</div>
+	</form>
+    <!-- project scripts -->
+	<script>
+	function clearField(input) {
+    input.value = "";
+	};
+	$("button").dblclick(function(){
+    $("#divDisplayWords").hide();
+	}	);
+	$("button").click(function(){
+    $("#divDisplayWords").show();
+	}	);
+	</script>
+    <script src="../app/app.js" type="text/javascript"></script>
+</body>
+</html> 

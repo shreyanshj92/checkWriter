@@ -1,0 +1,16 @@
+input { 
+	background-color: #efefef;
+	border: 2px solid #CCCCC; 
+	font-size: large
+	}
+h1{
+	color:#100a5b
+	}
+#divDisplayWords {
+		font-size: 13;
+		color: Teal;
+		font-family: Arial;
+	}
+span{
+	color:red;
+}
